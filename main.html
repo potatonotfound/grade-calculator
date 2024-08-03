@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="index.js"></script>
+        <style>
+            #addrow {
+                width:100%;
+                display:block;
+            }
+        </style>
+    </head>
+    <body onload="AddRows(3);">
+        <table id="calculator">
+            <thead>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Grade</th>
+                    <th>Max Grade</th>
+                </tr>
+            </thead>
+            <tbody id="calcbody">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><p>Total:</p></td>
+                    <td><input type="number" id="t0" readonly></td>
+                    <td><input type="number" id="t1" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" id="addrow" onClick="AddRows(parseInt(document.getElementById('nrow').value));"><span>+</span> Add Row</button></td>
+                    <td><input type="number" id="nrow" value="1"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
